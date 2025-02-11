@@ -8,8 +8,6 @@ ssl._create_default_https_context = ssl._create_unverified_context
 
 
 class TubeSaveApp(ctk.CTk):
-    PATH = "/Users/mariociaponi/videos_yt/"
-
     def __init__(self):
         super().__init__()
 
