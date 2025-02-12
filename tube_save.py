@@ -1,10 +1,15 @@
 import pytubefix.exceptions
 from pytubefix import YouTube
 import customtkinter as ctk
-from tkinter import messagebox
+from tkinter import messagebox, filedialog
 import os
 import ssl
 ssl._create_default_https_context = ssl._create_unverified_context
+
+
+def get_path():
+    path = filedialog.askdirectory(initialdir="")
+    return path
 
 
 class TubeSaveApp(ctk.CTk):
@@ -42,16 +47,17 @@ class TubeSaveApp(ctk.CTk):
         self.download_button.pack(pady=12)
 
     @staticmethod
-    def download_video(yt):
+    def download_video(yt, path):
         yd = yt.streams.get_highest_resolution()
-        yd.download(os.path.dirname("./"))
+        yd.download(os.path.dirname(f"{path}/"))
 
     def show_video_details(self, yt):
         def confirmation():
             is_user_sure = messagebox.askyesno("Are you sure?", "Are you sure you want to download the video?")
 
             if is_user_sure:
-                self.download_video(yt)
+                path = get_path()
+                self.download_video(yt, path)
             else:
                 messagebox.showinfo("Video was not downloaded.", f"Video {yt.title} was not downloaded")
 
