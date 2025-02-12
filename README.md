@@ -1,18 +1,18 @@
-# TubeSave 🎥
+# TubeSave :movie_camera:
 
 A simple YouTube video downloader built with **Python**, **pytubefix**, and **CustomTkinter**.
 
 ## Features
-- ✅ Download YouTube videos in the highest available resolution.
-- ✅ Preview video details before downloading.
-- ✅ User-friendly GUI with a dark theme.
-- ✅ Error handling for invalid or empty URLs.
+- :white_check_mark: Download YouTube videos in the highest available resolution.
+- :white_check_mark: Preview video details before downloading.
+- :white_check_mark: User-friendly GUI with a dark theme.
+- :white_check_mark: Error handling for invalid or empty URLs.
 
 ## Installation
 
 1. **Clone the repository**
    
-```bashUsage
+```shell
 git clone https://github.com/yourusername/tubesave.git
 cd tubesave
 ```
@@ -21,16 +21,22 @@ cd tubesave
 
 Ensure you have Python installed (>=3.8), then install the required packages:
 
-```bash
+```shell
 pip install pytubefix customtkinter
 pip install customtkinter
+```
+
+or
+
+```shell
+pip install -r requirements.txt
 ```
 
 ## Usage
 
 Run the script to launch the TubeSave GUI:
 
-```bash
+```shell
 Run the script to launch the TubeSave GUI:
 ```
 
@@ -41,7 +47,7 @@ Run the script to launch the TubeSave GUI:
 
 ## File Structure
 
-```bash
+```
 /tubesave
 │── tubesave.py         # Main application file
 │── README.md           # Project documentation
@@ -64,6 +70,6 @@ Feel free to fork and submit pull requests to improve the project!
 
 ## License
 
-📝 MIT License.
+:memo: MIT License.
 
-Made with ❤️ by Mario Lupo Ciaponi
+Made with :heart: by Mario Lupo Ciaponi
